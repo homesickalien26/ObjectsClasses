@@ -6,7 +6,7 @@
         {
             Console.WriteLine("How many pets do you have?")
                 // array would go here
-                
+                int arrayPetCount = new int(Console.ReadLine));
                 
                 
                 // this is where id seperate the array so the user can imput data for each pet. while creating a loop depending on how many pets the user has
