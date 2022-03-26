@@ -2,7 +2,7 @@
 {
     public class Program
     {
-        static void Main(string[] args)
+        static void Main(string[] args) // I have no idea what this code means.
         {
             Console.WriteLine("How many pets do you have?")
                 // array would go here
