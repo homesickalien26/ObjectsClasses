@@ -1,27 +1,35 @@
-﻿namespace ObjectsClasses
+namespace ObjectsClasses
 {
-    public class Program
+    class Program
     {
-        static void Main(string[] args) // I have no idea what this code means.
+        static void Main(string[] args)
         {
-            Console.WriteLine("How many pets do you have?")
-                // array would go here
-                int arrayPetCount = new int(Console.ReadLine));
-                
-              
-                // this is where id seperate the array so the user can imput data for each pet. while creating a loop depending on how many pets the user 
-                    // Im stuck on the idea that a user may have 2 dogs...lets next get the first dogs name..then for that dog lets get its age and its breed.
-                    // lets then loop that so the user can get the 2nd dogs name. etc 
-            Pet petInfo = new Pet();
-            Console.WriteLine("What is your pets name?");
-            petInfo.Name = Console.ReadLine();
-            Console.WriteLine("What is your pets breed");
-            petInfo.Breed = Console.ReadLine();
-            Console.WriteLine("What is your dogs age?");
-            petInfo.Age = int.Parse(Console.ReadLine());
-           
+            Console.Write("How many pets do you have?");
+            int size = int.Parse(Console.ReadLine());
+
+            Pet[] petsArray = new Pet[size];
+
+
+
+            for (int i = 0; i < petsArray.Length; i++)
+            {
+                Console.Write("Enter Pet #" + (i + 1) + "'s Name:");
+                string petName = Console.ReadLine();
+                Console.WriteLine("What breed type is your pet ?");
+                string petBreed = Console.ReadLine();
+
+                Console.WriteLine("What is your Pets age");
+                int petAge = int.Parse(Console.ReadLine());
+
+                petsArray[i] = new Pet() { Age = petAge, Breed = petBreed, Name = petName };
+
+            }
+
+            foreach (Pet pet in petsArray)
+            {
+                Console.WriteLine("Your pets name is " + pet.Name + " Your pets age is " + pet.Age + " Your pets breed is " + pet.Breed);
+            }
 
         }
-
     }
 }
